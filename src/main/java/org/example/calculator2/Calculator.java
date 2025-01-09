@@ -23,6 +23,13 @@ public class Calculator {
         this.results = results;
     }
 
+    // 가장 먼저 저장된 데이터를 삭제하는 메서드
+    public void removeResult() {
+        double removeResult = results.get(0);
+        results.remove(0);
+        System.out.println("삭제된 값 : " + removeResult);
+    }
+
     public double calculate(int first, char operator, int second) {
         //계산 결과를 저장하는 변수
         double result = 0;

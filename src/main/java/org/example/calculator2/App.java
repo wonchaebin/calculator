@@ -11,7 +11,7 @@ public class App {
         Calculator calculator = new Calculator();
 
         //무한 루프로 사용자와의 상호작용 반복
-        while(true) {
+        while (true) {
             System.out.print("첫 번째 숫자를 입력하세요.: ");
             int first = scanner.nextInt();
 
@@ -27,6 +27,19 @@ public class App {
             System.out.println("결과: " + result);
             //지금까지 저장된 결과들 출력
             System.out.println("지금까지의 결과: " + calculator.getResults());
+
+            System.out.print("가장 먼저 저장된 데이터를 삭제하시겠습니까? (Y/N) : ");
+            scanner.nextLine(); //개행 문자 소비
+            String deleteInput = scanner.nextLine();
+
+            if (deleteInput.equals("Y")) {
+                calculator.removeResult();
+                System.out.println("현재 결과 목록 : " + calculator.getResults());
+            } else if (deleteInput.equals("N")) {
+                System.out.println("삭제를 취소하셨습니다.");
+            } else {
+                System.out.println("잘못된 입력입니다. Y 또는 N을 입력하세요.");
+            }
             //추가적인 계산 여부 확인
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료): ");
             //개행 문자 소비
@@ -36,7 +49,7 @@ public class App {
 
             //사용자가 "exit" 입력 시 프로그램 종료
             if (input.equals("exit")) {
-                break; //무한 루프 종료
+                break;
             }
         }
     }
