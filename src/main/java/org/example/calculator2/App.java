@@ -37,8 +37,6 @@ public class App {
                 System.out.println("현재 결과 목록 : " + calculator.getResults());
             } else if (deleteInput.equals("N")) {
                 System.out.println("삭제를 취소하셨습니다.");
-            } else {
-                System.out.println("잘못된 입력입니다. Y 또는 N을 입력하세요.");
             }
             //추가적인 계산 여부 확인
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료): ");
