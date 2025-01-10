@@ -45,13 +45,7 @@ public class Calculator {
                 break;
             case '/':
                 //두 번째 숫자가 0일 경우 반복적으로 입력 받음
-                while (second == 0) {
-                    System.out.println("0으로 나눌 수 없습니다. 다시 입력하세요.: ");
-                    //사용자 입력을 받기 위한 Scanner
-                    Scanner scanner = new Scanner(System.in);
-                    //새로운 값을 입력받아 second에 저장
-                    second = scanner.nextInt();
-                }
+
                 //정수를 double로 변환하여 소수점까지 받기
                 result = (double)first / second;
                 break;
